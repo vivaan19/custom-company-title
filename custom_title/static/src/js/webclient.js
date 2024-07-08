@@ -1,38 +1,31 @@
 /** @odoo-module **/
 
 import { WebClient } from "@web/webclient/webclient";
-import { patch } from "@web/core/utils/patch";
-import { session } from "@web/session";
-import { jsonrpc } from "@web/core/network/rpc_service";
+import { patch } from "web.utils";
+import { useService } from "@web/core/utils/hooks";
 
-import { cookie } from "@web/core/browser/cookie";
+import session from 'web.session';
+import ajax from 'web.ajax';
 
-
-patch(WebClient.prototype, {
-    /**
-     * @override
-    */
+patch(WebClient.prototype, "custom_title.WebClient", {
     setup() {
-
-        super.setup();
+        
+        this._super();    
         this.getCustomTitle();
-
+        
     },
-
+    
     async getCustomTitle() {
-
+        
         try {
 
-            if (!cookie || !cookie.get("cids")) {
+            if (!session || !session.user_context || !session.user_context.allowed_company_ids) {
                 return;
             }
 
             try {
 
-                var comp_id = cookie.get("cids");
-
-                console.log("Session current company ----- ", session);
-
+                var comp_id = session.user_context.allowed_company_ids[0];
             }
 
             catch {
@@ -41,15 +34,14 @@ patch(WebClient.prototype, {
             }
 
             const company_data = {
+
                 "comp_id": comp_id,
+
             }
 
-            console.log("Company Data === ", company_data);
-
             // ajax.jsonRpc does not require seperate Qunit test-case 
-            const result = await jsonrpc('/current_company_doc_title', company_data);
-
-            console.log("Result ---- ", result);
+            
+            var result = await ajax.jsonRpc("/current_company_doc_title", "call", company_data);
 
             if (result && result.current_company_title) {
 
@@ -68,6 +60,9 @@ patch(WebClient.prototype, {
         } catch (error) {
 
             this.title.setParts({ zopenerp: "Odoo" });
+
+            console.error("Error fetching custom title:", error);
+
             return;
         }
 

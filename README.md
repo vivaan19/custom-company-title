@@ -46,39 +46,32 @@ code using Beautiful Soup
 
 ## Configure On-Hand Stock based on POS Location
 
-  - First we need to Enable real time Inventory Management for POS for seamless reduction of stock-quanity from POS to back-end (enable developer mode)
-    - Navigate to `POS module` -> `Configuration` -> `Settings` -> `Inventory` -> `Enable Inventory Management In real time`
-  - POS Stock Configuration
-    - Navigate to `POS Module` -> `Configuration` -> `Settings` -> `Stock Configuration` -> `Enable "Show Stock Qty option`
-  - Users can view product stock based on location
-    - Navigate to `POS Module` -> `Configuration` -> `Settings` -> `Stock Configuration` -> `Stock Locations` 
-
+  - First we need to custom document title which is below Favicon inside company
+    - Navigate to `Setting` -> `User & Companies` -> `Select a company` -> `Document title` -> `Write your custom title`
+  - POS Configuration - after installing POS module 
+    - Navigate to `POS Module` -> `Configuration` -> `Settings` -> `Custom title in POS` -> `Enable Custom Title in POS`
+  
 ## Screenshots
 
-### Enable Real Time Inventory Management 
+### Company Configuration 
 
-![Enable Real Time Inventory Management](/screenshots/real_time.png)
+![Input Custom title in Company](/screenshots/company_config.png)
 
-### POS Stock Configuration
+### Multi-Company Title Install 
 
-![Stock Configuration](/screenshots/stock_conf_enable.png)
+![Different title for different companies](/screenshots/multi_company_title.png)
 
-### View Product stock based on location
+### Title after logout
 
-![View product stock based on location](/screenshots/stock_config_location.png)
+![Title after logout](/screenshots/title_after_logout.png)
 
-### Users can see product stock by their stock location.
+### When POS module is installed custom title can be configured 
 
-![On-Hand Stock levels on selected location](/screenshots/product_by_loc.png)
+![Enable Custom title POS Module](/screenshots/config_pos_install.png)
 
-### View in POS After Configuration 
+### POS Interface after Enabling Custom title in POS
 
-![POS View](/screenshots/pos_interface.png)
-
-### Real time stock update Sync Button 
-
-![Sync Button](/screenshots/sync_button.png)
-
+![POS View](/screenshots/pos_screen.png)
 
 ## Contributing
 

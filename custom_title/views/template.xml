@@ -12,12 +12,11 @@
 
     </template>
 
-    <!-- <template id="custom_title_change_for_pos" name="Custom Title Layout for pos"
-        inherit_id="point_of_sale.index">
-
+    <!-- <template id="custom_title_change_for_pos" name="Custom Title Layout for pos" inherit_id="point_of_sale.index">
+        
         <xpath expr="//head/title" position="replace">
-
-            <title t-esc="custom_title" />
+            
+            <title t-esc="custom_title"/>
 
         </xpath>
 

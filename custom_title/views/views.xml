@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="view_company_custom_title" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.custom.title</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='favicon']" position="after">
+                <field name="document_title" />
+            </xpath>
+        </field>
+    </record>
+
+
+<!-- 
+    <record id="bd_res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">bd.res.config.setting.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@id='companies']" position="before">
+
+                <div id="custom_title_in_pos">
+
+                    <h2>Custom Title in POS</h2>
+
+                    <div class="row mt16 o_settings_container" name="custom_title_toggle">
+
+                        <div id="custom_title_toggle" class="col-12 col-lg-6 o_setting_box"
+                            help="Provide Custom Title in POS"
+                            title="Provide Custom Title in POS">
+
+                            <div class="o_setting_left_pane">
+                                <field name="module_point_of_sale" widget="upgrade_boolean" />
+
+                            </div>
+
+                            <div class="o_setting_right_pane">
+
+                                <label string="Provide Custom Title in POS"
+                                    for="module_point_of_sale" />
+
+                                <span class="fa fa-lg fa-building-o"
+                                    title="Values set here are company-specific."
+                                    aria-label="Values set here are company-specific." role="img" />
+
+                                <div class="text-muted">
+                                    Provide Custom Title in POS
+                                </div>
+
+                                <div class="content-group"
+                                    attrs="{'invisible': [('module_point_of_sale','=',False)]}"
+                                    id="custom_title_pos_comp">
+                                    <div class="mt16 text-warning"><strong>Save</strong> this page
+                                        and come back to set-up your custom title in POS</div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="custom_title_module_stock_account" string="Custom Title in POS"
+                        help="Provide Custom Title in POS"
+                        title="Provide Custom Title in POS" invisible="1">
+
+                        <field name="module_stock_account" widget="upgrade_boolean" />
+
+                    </div>
+
+                    <div id="custom_title_module_barcodes" string="Custom Title in POS"
+                        help="Provide Custom Title in POS"
+                        title="Provide Custom Title in POS" invisible="1">
+
+                        <field name="module_barcodes" widget="upgrade_boolean" />
+
+                    </div>
+
+                    <div id="custom_title_module_web_editor" string="Custom Title in POS"
+                        help="Provide Custom Title in POS"
+                        title="Provide Custom Title in POS" invisible="1">
+
+                        <field name="module_web_editor" widget="upgrade_boolean" />
+
+                    </div>
+
+                    <div id="custom_title_module_digest" string="Custom Title in POS"
+                        help="Provide Custom Title in POS"
+                        title="Provide Custom Title in POS" invisible="1">
+
+                        <field name="module_digest" widget="upgrade_boolean" />
+
+                    </div>
+
+                    <div id="custom_title_module_mail" string="Custom Title in POS"
+                        help="Provide Custom Title in POS"
+                        title="Provide Custom Title in POS" invisible="1">
+
+                        <field name="module_mail" widget="upgrade_boolean" />
+
+                    </div>
+
+
+                </div>
+
+
+            </xpath>
+
+        </field>
+    </record>
+ -->
+
+
+
+</odoo>
