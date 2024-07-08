@@ -12,6 +12,7 @@ This module aims to provide custom re-branding of tab-names according to title s
 - Increased customer engagement and brand recognition by **15%**, as measured by user feedback and satisfaction surveys Developed a real-time stock sync button to update stock levels instantly from the back end without refreshing the POS screen
 - Overcame the challenge of removing POS dependency by manipulating XML architecture and injecting custom XML
 code using Beautiful Soup
+- Utilized Odoo sh testing suite for CI/CD testing in development branch 
   
 ## Installation
 
