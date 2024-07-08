@@ -44,7 +44,7 @@ code using Beautiful Soup
 
     Go to `Apps` in Odoo, search for `custom_title`, and install it.
 
-## Configure On-Hand Stock based on POS Location
+## Configure Custom Title in POS and Odoo ERP Back-end
 
   - First we need to custom document title which is below Favicon inside company
     - Navigate to `Setting` -> `User & Companies` -> `Select a company` -> `Document title` -> `Write your custom title`
